@@ -1,0 +1,41 @@
+﻿@using OrchardCore.DisplayManagement.Zones
+@using OrchardCore.Entities
+@using OrchardCore.ContentManagement
+@using OrchardCore.Flows.Models
+@using Newtonsoft.Json.Linq
+@using System.Linq
+
+@inject OrchardCore.ContentManagement.Display.IContentItemDisplayManager ContentItemDisplayManager
+@{
+    string title = Model.ContentItem.Content.InnerPageSlider?.Title?.Text.Value;
+    string subTitle = Model.ContentItem.Content.InnerPageSlider?.SubTitle?.Text?.Value;
+    string img = string.Empty;
+    if (Model.ContentItem.Content.InnerPageSlider?.Image.Paths.Count > 0)
+        img = Model.ContentItem.Content.InnerPageSlider.Image.Paths[0];
+}
+<!-- Page Banner -->
+<div class="page-banner sustainability-banner page-banner--fullscreen d-flex align-items-center position-relative">
+    @if (!string.IsNullOrEmpty(img))
+    {
+        <img class="position-absolute object-fit-cover h-100 w-100" asset-src="@img" alt="" />
+    }
+    else
+    {
+        <img class="position-absolute object-fit-cover h-100 w-100" src="content/images/happenings-banner-bg.jpg" alt="Happenings" />
+    }
+    <div class="page-banner__heading-wrapper shadow position-absolute start-0 top-50 translate-middle-y bg-white">
+    </div>
+    <div class="container position-relative z-1">
+        <div class="row">
+            <div class="col-10 col-lg-6">
+                <h1 class="page-banner__heading fw-normal mb-0 lh-1">@title</h1>
+                @if (!string.IsNullOrEmpty(subTitle))
+                {
+                    <h4 class="text-secondary fw-normal mb-0">@subTitle</h4>
+                }
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Page Banner -->

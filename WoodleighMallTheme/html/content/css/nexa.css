@@ -1,0 +1,34 @@
+@font-face {
+    font-family: nexa;
+    src: url('../fonts/NexaLight.eot');
+    src: url('../fonts/NexaLight.eot') format('embedded-opentype'),
+         url('../fonts/NexaLight.woff') format('woff'),
+         url('../fonts/NexaLight.ttf') format('truetype'),
+         url('../fonts/NexaLight.svg#nexa') format('svg');
+	font-weight:300;
+	font-style:normal;
+}
+
+
+@font-face {
+    font-family: nexa;
+    src: url('../fonts/NexaRegular.eot');
+    src: url('../fonts/NexaRegular.eot') format('embedded-opentype'),
+         url('../fonts/NexaRegular.woff') format('woff'),
+         url('../fonts/NexaRegular.ttf') format('truetype'),
+         url('../fonts/NexaRegular.svg#nexa') format('svg');
+	font-weight:400;
+	font-style:normal;
+}
+
+
+@font-face {
+    font-family: nexa;
+    src: url('../fonts/NexaBold.eot');
+    src: url('../fonts/NexaBold.eot') format('embedded-opentype'),
+         url('../fonts/NexaBold.woff') format('woff'),
+         url('../fonts/NexaBold.ttf') format('truetype'),
+         url('../fonts/NexaBold.svg#nexa') format('svg');
+	font-weight:700;
+	font-style:normal;
+}

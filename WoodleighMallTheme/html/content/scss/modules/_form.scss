@@ -1,0 +1,24 @@
+.form-control {
+	min-height: 4.1rem;
+	@include media-breakpoint-down(md) {
+		min-height: 3rem;
+		padding-bottom: 0.3rem;
+	}
+}
+
+.form-control-sm {
+	min-height: 2.9rem;
+}
+
+textarea.form-control {
+	min-height: 21rem;
+	@include media-breakpoint-down(md) {
+		min-height: 12rem;
+	}
+}
+
+.store-search-input {
+	@include media-breakpoint-down(md) {
+		padding-top: .45rem;
+	}
+}

@@ -1,0 +1,32 @@
+.footer__logo {
+    max-width: 11rem;
+    @include media-breakpoint-down(md) {
+        max-width: 100px;
+    }
+}
+
+.site-footer {
+    @include media-breakpoint-up(md) {
+    font-size: 1.1rem;
+    }
+    .fs-base {
+        font-size: 12px;
+    }
+}
+
+.footer__social img {
+    @include media-breakpoint-down(md) {
+        width: 22px;
+    }
+}
+
+
+.footer__contact {
+    @include media-breakpoint-down(md) {
+        margin: 0 auto;
+        max-width: 15rem;
+    }
+    li {
+        padding-left: 2.1rem;
+    }
+}

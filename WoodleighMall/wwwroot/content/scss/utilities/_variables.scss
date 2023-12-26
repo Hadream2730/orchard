@@ -1,0 +1,162 @@
+$grid-breakpoints: (
+xs: 0,
+sm: 539px,
+md: 768px,
+lg: 992px,
+xl: 1200px
+);
+
+$container-max-widths: (
+sm: 567px,
+md: 768px,
+lg: 992px,
+xl: 1200px
+);
+
+// Color system
+
+$white:    #fff !default;
+$gray-100: #fafafa !default;
+$gray-200: #f8f8f8 !default;
+$gray-300: #e8e8e8 !default;
+$gray-400: #d9d9d9 !default;
+$gray-500: #8c98a3 !default;
+$gray-600: #B5B5B5 !default;
+$gray-700: #333333 !default;
+$gray-800: #2f2f2f !default;
+$gray-900: #242424 !default;
+$black:    #000 !default;
+
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
+$blue:    #003A70 !default;
+$red:     #EA4249 !default;
+$gold:    #FFCA38 !default;
+$green:   #31572C !default;
+$teal:    #CBECFB !default;
+$orange:  #F47B53 !default;
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "red":        $red,
+    "green":      $green,
+    "teal":       $teal,
+    "orange":     $orange,
+    "white":      $white,
+    "gray":       $gray-600,
+    "gray-dark":  $gray-900
+  ),
+  $colors
+);
+
+$primary:       $green !default;
+$secondary:     #613311 !default;
+$success:       $green !default;
+$info:          #0091C3 !default;
+$warning:       $orange !default;
+$danger:        $red !default;
+$light:         #F0F0F0 !default;
+$dark:          $gray-900 !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "gold":       $gold,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $theme-colors
+);
+
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:      nexa, sans-serif !default;
+$font-family-base:            $font-family-sans-serif !default;
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+// stylelint-enable value-keyword-case
+
+$body-bg: #fff;
+$body-color: $dark;
+$text-muted: #B5B5B5 !default;
+
+
+// Headings
+$h1-font-size:                5rem !default;
+$h2-font-size:                3.75rem !default;
+$h3-font-size:                2.8125rem !default;
+$h4-font-size:                2.0625rem !default;
+$h5-font-size:                1.5625rem !default;
+$h6-font-size:                1.25rem !default;
+$headings-font-weight:        700 !default;
+
+// Shadows
+$box-shadow:                  0px 5px 10px #00000029 !default;
+$box-shadow-sm:               0px 2px 10px #00000014 !default;
+
+
+// Borders
+$border-color:         $gray-400 !default;
+
+
+// Other Settings
+$enable-shadows:              true !default;
+$enable-negative-margins:     true !default;
+$grid-gutter-width:           25px !default;
+
+
+// Border Radius
+$border-radius: 1rem !default;
+$border-radius-lg: 1.25rem !default;
+$border-radius-md: 0.75rem !default;
+$border-radius-sm: 0.625rem !default;
+$border-radius-xs: 0.25rem !default;
+
+
+// Buttons
+$btn-padding-y:               0.85rem !default;
+$btn-padding-x:               3rem !default;
+$btn-border-radius:           $border-radius-sm !default;
+$btn-line-height:             1 !default;
+$btn-padding-y-sm:            0.36rem !default;
+$btn-padding-x-sm:            1rem !default;
+
+
+// Input
+$input-height:       14.6rem !default;
+$input-height-sm:    2.8125rem !default;
+$input-btn-padding-y:             .5rem !default;
+$input-btn-padding-x:             1rem !default;
+$input-font-size:                 1.125rem !default;
+$input-border-radius:             $border-radius-sm !default;
+$input-border-radius-sm:          $border-radius-sm !default;
+$input-border-radius-lg:          $border-radius-lg !default;
+$input-placeholder-color:         $primary !default;
+
+
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-responsive-font-sizes: true !default;

@@ -1,0 +1,115 @@
+
+.select2 {
+    border: 1px solid #D3D3D3;
+    display: flex;
+    align-items: center;
+    @extend .form-control;
+    min-height: 3rem;
+    .selection {
+        width: 100%;
+    }
+}
+
+.select2-container--default {
+    .select2-selection {
+        border: 0;
+        background: none;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .select2-selection__rendered {
+        margin-top: 0.4rem;
+        font-size: 1.2rem;
+        color: $primary !important;
+        padding: 0 !important;
+    }
+}
+
+.select2-container--default .select2-selection .select2-selection__rendered {
+    line-height: 24px;
+}
+
+
+.select2-dropdown, {
+border: 1px solid #D3D3D3;
+}
+
+.select2-dropdown,
+.select2-results__option--selectable {
+    z-index: 2;
+    border: 0 !important;
+    padding: 0;
+    font-size: 0.875rem;
+}
+
+.select2-container--default .select2-results__option--selected {
+    background: $primary;
+    color: #fff;
+}
+
+.select2-results__option {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+
+    &:hover {
+        background: $light !important;
+        color: $dark!important;
+    }
+}
+
+.select2-container--default .select2-selection .select2-selection__arrow b {
+    border-width: 0.4rem 0.4rem 0 0.4rem
+}
+
+.select2-container--default.select2-container--open .select2-selection .select2-selection__arrow b {
+    border-width: 0 0.4rem 0.4rem 0.4rem;
+}
+
+.select2-container--default .select2-selection .select2-selection__arrow {
+    right: 1rem;
+    @include vertically-centered();
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+     background: rgba(0,0,0,0.04) !important;
+      color: $dark!important;
+}
+
+
+.select2-results {
+    border: 1px solid #D3D3D3;
+    border-top: 0;
+}
+
+.select2-dropdown--above {
+    .select2-results {
+    border: 1px solid #D3D3D3;
+    border-bottom: 0;
+}
+}
+
+
+.select2-container--default.select2-container--focus .select2-selection--multiple,
+.select2-container--default .select2-selection--multiple, 
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple .select2-selection__choice,
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    border: 0;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background: $primary;
+    color: #fff;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: #fff;
+}
+
+.form-control + .select2 {
+    .select2-selection__rendered {
+        font-size: $input-font-size;
+    }
+}

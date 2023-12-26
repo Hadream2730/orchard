@@ -1,0 +1,39 @@
+﻿@model SearchResultsViewModel
+@inject IContentItemDisplayManager DisplayManager
+
+@if (Model.ContentItems != null && Model.ContentItems.Any())
+{
+    var stores = Model.ContentItems.Where(x => x.ContentType == "Store").ToList();
+    var promo = Model.ContentItems.Where(x => x.ContentType == "Promotion").ToList();
+
+    <div class="mt-4 mt-md-5">
+        <h5>Stores</h5>
+        <div class="row">
+            @foreach (var contentItem in stores)
+            {
+                @await Orchard.DisplayAsync(contentItem,"InStoreList")
+            }
+        </div>
+    </div>
+    if (promo.Count > 0)
+    {
+        <div class="mt-4 mt-md-5">
+            <h5>Promotion</h5>
+            <div class="row">
+                @foreach (var contentItem in promo)
+                {
+                    @await Orchard.DisplayAsync(contentItem,"InPromotionList")
+                }
+            </div>
+        </div>
+    }
+}
+else
+{
+    <!-- No Result Found -->
+    <div class="mt-4 mt-md-5">
+        <h5>No matches</h5>
+        <p><em>Please try another search.</em></p>
+    </div>
+    <!-- No Result Found -->
+}

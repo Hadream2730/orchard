@@ -1,0 +1,24 @@
+.owl-nav {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 3rem;
+    z-index: 2;
+    @include vertically-centered();
+    @include media-breakpoint-down(xl) {
+        padding: 0 1rem;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 0 0.5rem;
+    }
+}
+
+
+.owl-carousel .owl-stage {
+    display: flex;
+}
+
+.s3-rewards-banner .owl-carousel .owl-stage {
+    display: block;
+}

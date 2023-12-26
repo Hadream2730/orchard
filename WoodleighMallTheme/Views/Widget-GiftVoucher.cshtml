@@ -1,0 +1,45 @@
+﻿@using OrchardCore.Entities
+@using OrchardCore.ContentManagement
+@using OrchardCore.Flows.Models
+@using Newtonsoft.Json.Linq
+@using System.Linq
+
+@inject OrchardCore.ContentManagement.Display.IContentItemDisplayManager ContentItemDisplayManager
+@{
+    string title = Model.ContentItem.Content.TitlePart?.Title?.Value;
+    var description = Model.ContentItem.Content.GiftVoucher.Description.Html;
+    bool isActive = Model.ContentItem.Content.GiftVoucher.IsActive.Value;
+    string wrapperClass = string.Empty;
+    string titleClass = string.Empty;
+    string voucherCodeClass = string.Empty;
+    string ulClasses = string.Empty;
+    if (isActive)
+    {
+        wrapperClass = "bg-info text-white shadow p-4 rounded-1 card card--highlighted d-flex flex-column justify-content-between";
+        titleClass = "card__tagline text-light fw-normal";
+        voucherCodeClass = "btn-copy btn btn-light text-info w-100 p-3 mt-5";
+        ulClasses = "py-md-4";
+    }
+    else
+    {
+        wrapperClass = "bg-white shadow p-4 rounded-1 card d-flex flex-column justify-content-between";
+        titleClass = "card__tagline fw-normal";
+        voucherCodeClass = "btn-copy btn btn-outline-info w-100 p-3 mt-5";
+    }
+}
+<!-- Voucher -->
+<div class="col-md-3 mt-3">
+    <div class="@wrapperClass">
+        <div>
+            <h6 class="@titleClass">Gift Voucher</h6>
+            <div class="px-lg-4">
+                <h4 class="card__heading my-4">@title <small class="fw-normal">Cashback</small></h4>
+                <ul class="list list-unstyled ps-0 mb-0 @ulClasses">
+                    @Html.Raw(description)
+                </ul>
+            </div>
+        </div>
+        <button class="@voucherCodeClass">VOUCHER CODE <span class="d-block mt-1 btn-copy__text">CASHBACK1</span></button>
+    </div>
+</div>
+<!-- Voucher -->

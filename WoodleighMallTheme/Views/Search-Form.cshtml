@@ -1,0 +1,12 @@
+﻿@model SearchFormViewModel
+
+<form action="@Url.Action("Search", "Search")" method="get">
+    <!-- Search -->
+    <div class="row g-0">
+        <div class="col-md-7 col-xl-5 position-relative">
+            <input type="text" name="Terms" class="form-control form-control-sm store-search-input rounded-5 ps-3 lh-1" value="@Model.Terms" />
+            <button type="submit" class="btn btn-gray store-search-btn text-white btn-sm fs-base rounded-5 py-md-2 position-absolute translate-middle-y top-50 end-0 me-1">@T["Search"]</button>
+        </div>
+    </div>
+    <!-- Search -->
+</form>

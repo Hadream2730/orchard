@@ -1,0 +1,21 @@
+@using OrchardCore.ContentManagement
+
+@{
+    ContentItem contentItem = Model.ContentItem;
+    var linkMenuItemPart = contentItem.Content["LinkMenuItemPart"];
+    int level = (int)Model.Level;
+}
+
+@if (level > 0)
+{
+    <a class="p-3 border-xl-top d-block" href="@Url.Content((string)linkMenuItemPart.Url)">@linkMenuItemPart.Name</a>
+}
+else if ((bool)(Model.HasItems))
+{
+    <a data-bs-toggle="dropdown" href="@Url.Content((string)linkMenuItemPart.Url)">@linkMenuItemPart.Name</a>
+}
+else
+{
+    <a  href="@Url.Content((string)linkMenuItemPart.Url)">@linkMenuItemPart.Name</a>
+}
+

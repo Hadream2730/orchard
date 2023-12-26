@@ -1,0 +1,99 @@
+﻿@using OrchardCore.DisplayManagement.Zones
+@using OrchardCore.Entities
+@using OrchardCore.ContentManagement
+@using OrchardCore.Flows.Models
+@using Newtonsoft.Json.Linq
+@using System.Linq
+@using OrchardCore.DisplayManagement
+@using OrchardCore.DisplayManagement.Shapes
+
+
+@inject OrchardCore.ContentManagement.Display.IContentItemDisplayManager ContentItemDisplayManager
+
+<!-- Section -->
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+
+            <!-- Tabs -->
+            <div class="tab-navigation tab-navigation--type2 mt-5">
+
+                <!-- Tab Head -->
+                <ul class="tab-head list-unstyled d-flex align-items-center justify-content-center fs-5 fw-bold">
+                    @foreach (var item in Model.ContentItem.Content.BagPart.ContentItems)
+                    {
+                        var strClass = string.Empty;
+                        if (Model.ContentItem.Content.BagPart.ContentItems.IndexOf(item) == 0)
+                        {
+                            strClass = "active";
+                        }
+                        string title = item.TitlePart.Title;
+                        string label = item.TabItem.datalabel.Text;
+                        <li class="tab-head__item cursor-pointer pb-2 pb-md-3 me-2 me-md-5 pe-md-4 @strClass" data-label=".@label">@title</li>
+                    }
+                </ul>
+                <!-- Tab Head -->
+                <!-- Tab Content -->
+                <div class="tab-content mt-4">
+                    @foreach (var item in Model.ContentItem.Content.BagPart.ContentItems)
+                    {
+                        var strClass = string.Empty;
+                        if (Model.ContentItem.Content.BagPart.ContentItems.IndexOf(item) == 0)
+                        {
+                            strClass = "d-block";
+                        }
+                        else { strClass = "d-none"; }
+
+                        string label = item.TabItem.datalabel.Text;
+
+                        string img = string.Empty;
+                        if (item.TabItem.SideImage.Paths.Count > 0)
+                            img = item.TabItem.SideImage.Paths[0];
+
+                        foreach (var widget in item.FlowPart.Widgets)
+                        {
+                            string contentType = widget.ContentType;
+                            if (contentType == "Faq")
+                            {
+
+                                <!-- Programme FAQs -->
+                                <div class="tab-pane @strClass @label">
+                                    <div class="d-md-flex align-items-start">
+                                        <img asset-src="@img" class="d-none d-md-block" width="90" alt="@item.TitlePart.Title" />
+                                        <ul class="list-unstyled ps-0 mb-0 site-accordion w-100 ms-md-4">
+                                            @foreach (var faqItem in widget.BagPart.ContentItems)
+                                            {
+                                                string title = faqItem.TitlePart.Title;
+                                                string answer = faqItem.FaqItem.Answer.Text;
+                                                <li class="site-accordion__item mb-4">
+                                                    <div class="d-flex align-items-center justify-content-between cursor-pointer site-accordion__heading p-3 p-md-4 shadow rounded">
+                                                        <strong>@title</strong>
+                                                        <span class="icon-block icon-block--chevron-down site-accordion__icon transition"></span>
+                                                    </div>
+                                                    <div class="site-accordion__content fs-base p-3">
+                                                        @Html.Raw(answer)
+                                                    </div>
+                                                </li>
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Programme FAQs -->
+                            }
+                            else if (contentType == "HTMLBlock")
+                            {
+                                var htmlContent = widget.HTMLBlock.HTML.Html;
+                                @Html.Raw(htmlContent);
+                            }
+                        }
+                    }
+                </div>
+                <!-- Tab Content -->
+
+            </div>
+            <!-- Tabs -->
+
+        </div>
+    </div>
+</div>
+<!-- Section -->

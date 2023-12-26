@@ -1,0 +1,10 @@
+1) Happenings Page - Evens card classes changed from "col-lg-4 col-md-6 mt-3" to "col-lg-4 col-sm-6 mt-3".
+2) In Same card, these classes "h-9rem h-md-17rem h-lg-21rem" is replaced by "h-17rem h-lg-21rem"
+3) Site popup, these classes "row pt-3 pt-md-4 position-relative" are replaced by "row pt-3 position-relative"
+4) Site popup header, these classes "site-popup__header p-3 p-md-4 d-flex justify-content-end" are replaced by "site-popup__header p-3 d-flex justify-content-end"
+5) Site popup Content - These classes "px-4 pb-4 pb-md-5 px-md-5" are replaced by "px-4 pb-4"
+6) Home Page Banner - Image background fade issue - Its happened because faded background applied to all because your slides are common. I have used javascript now to detect heading, if heading is there, overlay will appear. For this, I have added class "home-banner" on parent and d-md-none is replaced by d-none for page-banner__overlay
+7) In sustainability Page - For this heading "The Woodleigh Mall is a proud winner of the BCA Green Mark Platinum Award", I have added these 2 classes "lh-1 mb-md-5"
+8) For Visit and sustainability page - In bullet list, I have removed css for icon. Now adding it via html.
+it is under each of the bullet-list li tag under span
+9) Replace site.css and custom.js

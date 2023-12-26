@@ -1,0 +1,115 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none !important;
+}
+
+::-moz-selection {
+    background: $primary;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: $primary;
+    color: #fff;
+    text-shadow: none;
+}
+
+// Small Systems
+@mixin small-laptop {
+    @media (max-width: 1550px) and (min-width: 1200px) {
+        @content;
+    }
+}
+
+html {
+    font-size: 13px;
+    @media (min-width: 1700px) {
+        font-size: 16px
+    }
+}
+
+
+html,
+body {
+    line-height: 1.4;
+}
+
+body {
+    font-size: 16px;
+    @include media-breakpoint-down(md) {
+        font-size: 15px;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 14px;
+    }
+}
+
+
+a {
+    color: $primary;
+    text-decoration: none;
+    @include transition(350ms ease-in-out);
+}
+
+ul, ol {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+}
+
+
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    line-height: 1.4;
+}
+
+
+p {
+    margin-bottom: 1.3rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+.body-content {
+    margin-top: 8rem;
+    @include media-breakpoint-down(lg) {
+        margin-top: 8rem;
+    }
+    @include media-breakpoint-down(md) {
+        margin-top: 75px;
+        
+    }
+}
+
+.container {
+    max-width: 94rem;
+    width: 100%;
+    @media (max-width: 1300px) {
+        max-width: 90rem;
+    }
+    @include media-breakpoint-down(xl) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}

@@ -1,0 +1,38 @@
+.site-popup {
+	z-index: 11;
+	max-width: 43rem;
+	display: none;
+	width: 90%;
+	@include absolute-centered();
+}
+
+
+.site-popup__img {
+	height: 23rem;
+	@include media-breakpoint-down(sm) {
+		height: 200px;
+	}
+}
+
+.site-popup__description {
+	max-height: 15rem;
+}
+
+
+.site-popup__heading {
+	&.has--share-icons {
+		@include media-breakpoint-down(md) {
+			padding-right: 6.8rem;
+		}
+	}
+}
+
+.card-popup {
+	.card-display-none {
+	display: block !important;
+}
+time {
+	font-weight: 700;
+	margin-bottom: 0.8rem;
+}
+}

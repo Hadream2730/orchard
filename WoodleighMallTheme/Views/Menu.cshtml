@@ -1,0 +1,22 @@
+@using OrchardCore.Entities
+@using OrchardCore.ContentManagement
+@{
+    string navAlign = "nav-menu d-lg-flex justify-content-end list-unstyled fw-bold text-uppercase";
+
+    TagBuilder tag = Tag(Model, "ul");
+    tag.AddCssClass(navAlign);
+
+    foreach (var item in Model.Items)
+    {
+        tag.InnerHtml.AppendHtml(await DisplayAsync(item));
+    }
+}
+
+@tag
+
+<style>
+    .nav-menu__item .nav-menu__item{
+        margin-right:0 !important;
+        padding-right:0!important;
+    }
+</style>

@@ -1,0 +1,36 @@
+.logo {
+    max-width: 9.75rem;
+    @include media-breakpoint-down(sm) {
+        width: 100px;
+    }
+}
+
+.header__search {
+    max-width: 18.5rem;
+    @include media-breakpoint-down(sm) {
+        max-width: 200px;
+    }
+    .form-control {
+        padding-right: 6rem;
+        @include media-breakpoint-down(sm) {
+            min-height: 30px;
+        }
+    }
+
+    .btn {
+        padding: 0.66rem 1.4rem;
+        @include media-breakpoint-down(md) {
+            padding-bottom: 0.55rem;
+        }
+    }
+}
+
+
+.site-header {
+    .container {
+        @include media-breakpoint-down(md) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}

@@ -1,0 +1,96 @@
+﻿@{
+    var title = Model.ContentItem.Content.TitlePart.Title.Value;
+    var description = Model.ContentItem.Content.Event.Description.Html;
+    string img = string.Empty;
+    if (Model.ContentItem.Content.Event.Image.Paths.Count > 0)
+        img = Model.ContentItem.Content.Event.Image.Paths[0];
+    string startDate = string.Empty, endDate = string.Empty;
+    DateTime? sDate = null, eDate = null;
+    if (Model.ContentItem.Content.Event.StartDate != null)
+    {
+        startDate = Model.ContentItem.Content.Event.StartDate.Value;
+        sDate = DateTime.Parse(startDate);
+    }
+    if (Model.ContentItem.Content.Event.EndDate != null)
+    {
+        endDate = Model.ContentItem.Content.Event.EndDate.Value;
+        eDate = DateTime.Parse(endDate);
+    }
+
+    var curDate = System.DateTime.Now;
+    var sDateText = sDate.Value.Year == eDate.Value.Year ? sDate.Value.ToString("dd MMMM") : sDate.Value.ToString("dd MMMM yyyy");
+    var eDateText = eDate.Value.ToString("dd MMMM yyyy");
+    var strDate = sDateText + " - " + eDateText;
+    var detailPagePath = Model.ContentItem.Content.AutoroutePart.Path.Value;
+    var facebookURL = "https://www.facebook.com/sharer/sharer.php?u=https://thewoodleighmall.com/" + detailPagePath + "&quote=Happenings";
+    var whatsappURL = "https://wa.me/?text=Happenings-https://thewoodleighmall.com/" + detailPagePath;
+}
+<!-- Main Content -->
+<div class="position-relative overflow-hidden">
+
+    <!-- Events -->
+    <div class="happenings-detail-section py-5">
+        <div class="container my-lg-5 position-relative z-1">
+            <div class="row">
+
+                <!-- Left Side -->
+                <div class="col-lg-6">
+                    <a href="/happenings" class="btn border rounded-5 mb-4 d-lg-none">Back</a>
+                    @if (!string.IsNullOrEmpty(img))
+                    {
+                        <img asset-src="@img" class="w-100" alt="@title" />
+                    }
+                    else
+                    {
+                        <img class="w-100" src="/content/images/Events/1.jpg" alt="Lorem ipsum" />
+                    }
+                </div>
+                <!-- Left Side -->
+                <!-- Right Side -->
+                <div class="col-lg-6">
+
+                    <div class="d-none d-lg-block">
+                        <a href="/happenings" class="btn border rounded-5 py-md-2 px-md-4 mb-2 mb-md-0">Back</a>
+                    </div>
+
+                    <div class="d-flex mt-5">
+
+                        <!-- Share -->
+                        <div class="me-4">
+                            <h6 class="mb-3 text-muted fw-normal fs-6">Share</h6>
+                            <ul class="list-unstyled ps-0 mb-0">
+                                <li class="mt-2">
+                                    <a href="@facebookURL" target="_blank" class="icon-block icon-block--facebook"></a>
+                                </li>
+                                <li class="mt-2">
+                                    <a href="@whatsappURL" target="_blank" class="icon-block icon-block--whatsapp"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Share -->
+                        <!-- Content -->
+                        <div>
+                            <h1 class="fs-3 text-primary fw-normal">@title</h1>
+                            <strong class="d-block">@strDate</strong>
+                            <div class="text-black">
+                                @Html.Raw(description)
+                            </div>
+                        </div>
+                        <!-- Content -->
+                    </div>
+                </div>
+                <!-- Right Side -->
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Events -->
+
+    <div class="text-end">
+        <img class="happenings-detail-section__img" src="content/images/site-icon.png" alt="Image" />
+    </div>
+
+</div>
+<!-- Main Content -->

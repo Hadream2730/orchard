@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Localization\" />
+  </ItemGroup>
+
+  <!-- Watcher include and excludes -->
+  <ItemGroup>
+      <Watch Include="**\*.cs" Exclude="Recipes\**;Assets\**;node_modules\**\*;**\*.js.map;obj\**\*;bin\**\*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Watch Remove="Manifest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CookieConsent.OrchardCore" Version="1.5.0" />
+    <PackageReference Include="OrchardCore.ContentManagement" Version="1.5.0" />
+    <PackageReference Include="OrchardCore.Contents" Version="1.5.0" />
+    <PackageReference Include="OrchardCore.Data" Version="1.5.0" />
+    <PackageReference Include="OrchardCore.DisplayManagement" Version="1.5.0" />
+    <PackageReference Include="OrchardCore.Flows" Version="1.5.0" />
+    <PackageReference Include="OrchardCore.Lists" Version="1.5.0" />
+    <PackageReference Include="OrchardCore.Lucene" Version="1.4.0" />
+    <PackageReference Include="OrchardCore.Media" Version="1.5.0" />
+    <PackageReference Include="OrchardCore.Menu" Version="1.5.0" />
+    <PackageReference Include="OrchardCore.Queries" Version="1.5.0" />
+    <PackageReference Include="OrchardCore.ResourceManagement" Version="1.5.0" />
+    <PackageReference Include="OrchardCore.Search.Abstractions" Version="1.5.0" />
+    <PackageReference Include="OrchardCore.Taxonomies" Version="1.5.0" />
+    <PackageReference Include="OrchardCore.Theme.Targets" Version="1.5.0" />
+  </ItemGroup>
+
+</Project>

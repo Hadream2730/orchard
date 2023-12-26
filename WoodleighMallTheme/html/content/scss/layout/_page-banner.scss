@@ -1,0 +1,106 @@
+.page-banner, .page-banner__slide {
+    min-height: 50rem;
+   background-size: cover;
+   background-repeat: no-repeat;
+   @include media-breakpoint-down(xl) {
+       min-height: 39rem;
+   }
+   @include media-breakpoint-down(lg) {
+       min-height: 25rem;
+   }
+   @include media-breakpoint-down(md) {
+       min-height: 17rem;
+   }
+   @include media-breakpoint-down(sm) {
+       min-height: 15rem;
+   }
+
+}
+
+.page-banner__container {
+    max-width: 50vw;
+    @include media-breakpoint-down(xl) {
+        max-width: 75vw;
+    }
+    @include media-breakpoint-down(md) {
+        max-width: 70vw;
+    }
+}
+
+.page-banner__heading {
+    @include media-breakpoint-down(md) {
+        font-size: 43px !important;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 24px !important;
+    }
+}
+
+.page-banner__subheading {
+    @include media-breakpoint-down(sm) {
+        font-size: 16px !important;
+    }
+}
+
+.page-banner__icon {
+    max-width: 18vw;
+    top: -8rem;
+    left: -7vw;
+}
+
+.page-banner__overlay {
+    background-color: rgba(255,255,255,0.5);
+}
+
+.page-banner--fullscreen {
+    height: calc(100vh - 8rem);
+    @include media-breakpoint-down(md) {
+        height: 500px;
+    }
+}
+
+.sustainability-banner {
+    @include media-breakpoint-down(md) {
+        height: 320px;
+    }
+}
+
+.sustainability-banner .page-banner__heading-wrapper {
+    width: 52vw;
+}
+
+.page-banner__heading-wrapper {
+    min-height: 42.8vh;
+    width: 49vw;
+    min-width: 40rem;
+    @include border-radius(0 1.875rem 1.875rem 0);
+    @include media-breakpoint-down(xl) {
+        width: 60vw;
+    }
+    @include media-breakpoint-down(lg) {
+        min-height: 17rem;
+    }
+    @include media-breakpoint-down(md) {
+        min-height: 10rem;
+    }
+    @media (min-width: 2500px) {
+        width: 53%;
+    }
+    @include media-breakpoint-down(md) {
+       min-width: 23rem; 
+       @include border-radius(0 10px 10px 0);
+    }
+}
+
+.page-banner__heading-wrapper--right {
+    width: 60vw;
+    min-width: 50rem;
+    @include border-radius(1.875rem 0 0 1.875rem);
+    @include media-breakpoint-down(xl) {
+        width: 88vw;
+    }
+    @include media-breakpoint-down(md) {
+        min-height: 13rem;
+        min-width: 95vw;
+    }
+}

@@ -1,0 +1,198 @@
+﻿@{
+    var storeList = await Orchard.QueryListItemsAsync("4zfd9ghrn7zxpsg61c6m20zn43");
+    var categoryList = await Orchard.GetContentItemByIdAsync("4ws3n4kvvp1j07rhe1wcqqhg5d");
+    var categories = categoryList.Content.TaxonomyPart.Terms;
+    storeList = storeList.OrderBy(x => x.DisplayText);
+}
+<!-- Section -->
+<div class="py-4 py-md-5">
+    <div class="container my-md-4">
+
+        <!-- Tabs -->
+        <div class="tab-navigation">
+            <!-- Tab Head -->
+            <div class="d-flex justify-content-center justify-content-md-start flex-wrap tab-head" id="navHeaderDiv">
+                <button type="button"
+                        class="tab-head__item btn btn-outline-primary rounded-5 me-2 me-md-4 navHeaderButton active">
+                    Levels
+                </button>
+                <button type="button"
+                        class="tab-head__item btn btn-outline-primary rounded-5 me-md-4 navHeaderButton">
+                    Categories
+                </button>
+                <button type="button"
+                        class="tab-head__item btn btn-outline-primary rounded-5 mt-3 mt-md-0 navHeaderButton">
+                    CPM Voucher Acceptance
+                </button>
+            </div>
+            <!-- Tab Head -->
+            <!-- Tab Content -->
+            <div class="tab-content mt-5">
+                <!-- Level Tab Pane -->
+                <div class="tab-pane1 tab-pane-level1">
+                    <!-- Selectbox -->
+                    <div class="row filterHead">
+                        <div class="col-xl-2 col-lg-3 col-md-4" id="divLevel">
+                            <select class="form-select" id="drpLevel">
+                                <option value="">All Levels</option>
+                                <option value="#B1">Basement 1</option>
+                                <option value="#01">Level 1</option>
+                                <option value="#02">Level 2</option>
+                                @*<option value="#03">Level 3</option>*@
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Selectbox -->
+                    <!-- Selectbox -->
+                    <div class="row filterHead">
+                        <div class="col-xl-3 col-lg-4 col-md-5" id="divCategory">
+                            <select class="form-select d-none" id="drpCategory">
+                                <option value="">All Categories</option>
+                                @foreach (var item in categories)
+                                {
+                                    <option value="@item.ContentItemId">@item.DisplayText</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Selectbox -->
+                    <div class="py-2">
+                        <hr class="border-primary my-4 opacity-100">
+                    </div>
+
+                    <!-- Select by Alphabets -->
+                    <ul class="d-flex justify-content-center flex-wrap fs-15px-sm lh-1 text-primary list-unstyled mb-5 filterHead">
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">A</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">B</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">C</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">D</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">E</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">F</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">G</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">H</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">I</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">J</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">K</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">L</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">M</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">N</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">O</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">P</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">Q</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">R</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">S</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">T</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">U</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">V</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">W</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">X</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">Y</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">Z</li>
+                        <li class="cursor-pointer rounded-1 p-1 p-md-2 me-1 me-md-3 alphabetFilter">#</li>
+                    </ul>
+                    <!-- Select by Alphabets -->
+                    <!-- Cards -->
+                    <div class="row">
+                        @foreach (var item in storeList)
+                        {
+                            @await Orchard.DisplayAsync(item,"InStoreList")
+                        }
+                    </div>
+                    <!-- Cards -->
+                    <!-- No data Cards -->
+                    <div class="row noData">
+                        No data available for selected filter or filter combination.
+                    </div>
+                    <!-- Cards -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var activeTab = "Levels";
+    var activeCharacter = "";
+    function applyFilterOnData() {
+
+        $('.noData').hide();
+        $('.dataCard').hide();
+        $('.filterHead').show();
+        $('.alphabetFilter').show();
+
+        switch (activeTab) {
+            case "Levels":
+                $('#divLevel').removeClass('d-none');
+                $('#divCategory').addClass('d-none');
+
+                var activeLevel = $('#drpLevel').val();
+
+                if (activeLevel == "" && activeCharacter == "") 
+                    $('.dataCard').show();
+                else if (activeCharacter != "" && activeLevel != "")
+                    $('div[data-level="' + activeLevel + '"][data-first-character="' + activeCharacter + '"]').show();
+                else if (activeLevel != "")
+                    $('div[data-level="' + activeLevel + '"]').show();
+                else
+                    $('div[data-first-character="' + activeCharacter + '"]').show();
+                break;
+            case "Categories":
+                $('#divCategory').removeClass('d-none');
+                $('#divLevel').addClass('d-none');
+
+                var activeCategory = $('#drpCategory').val();
+
+                if (activeCategory == "" && activeCharacter == "")
+                    $('.dataCard').show();
+                else if (activeCharacter != "" && activeCategory != "")
+                    $('div[data-category*="' + activeCategory + '"][data-first-character="' + activeCharacter + '"]').show();
+                else if (activeCategory != "")
+                    $('div[data-category*="' + activeCategory + '"]').show();
+                else
+                    $('div[data-first-character="' + activeCharacter + '"]').show();
+                break;
+            case "CPM Voucher Acceptance":
+                $('.filterHead').hide();
+                if (activeCharacter != "")
+                    $('div[data-first-character="' + activeCharacter + '"][data-cpm="True"]').show();
+                else
+                    $('div[data-cpm="True"]').show();
+
+                break;
+            default:
+            // code block
+        }
+
+        if ($('.dataCard:visible').length == 0)
+            $('.noData').show();
+    }
+
+
+
+    $(document).ready(function () {
+        applyFilterOnData();
+    });
+
+    $(document).on("click", ".navHeaderButton", function () {
+        activeTab = $(this).text().trim();
+        $('.alphabetFilter').removeClass('bg-primary text-white');
+        activeCharacter = "";
+        applyFilterOnData();
+    });
+
+    $(document).on("change", "#drpLevel", function () {
+        applyFilterOnData();
+    });
+
+    $(document).on("change", "#drpCategory", function () {
+        applyFilterOnData();
+    });
+
+    $(document).on("click", ".alphabetFilter", function () {
+        $('.alphabetFilter').removeClass('bg-primary text-white');
+        $(this).addClass('bg-primary text-white');
+        activeCharacter = $(this).text().trim();
+        applyFilterOnData();
+    });
+
+
+</script>

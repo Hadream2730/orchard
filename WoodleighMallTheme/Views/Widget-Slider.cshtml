@@ -1,0 +1,41 @@
+﻿@using OrchardCore.DisplayManagement.Zones
+@using OrchardCore.Entities
+@using OrchardCore.ContentManagement
+@using OrchardCore.Flows.Models
+@using Newtonsoft.Json.Linq
+@using System.Linq
+
+@inject OrchardCore.ContentManagement.Display.IContentItemDisplayManager ContentItemDisplayManager
+<!-- Page Banner -->
+<div class="page-banner home-banner">
+    <!-- Owl Carousel -->
+    <div class="owl-carousel page-banner__carousel">
+        @{
+            @foreach (var item in Model.ContentItem.Content.BagPart.ContentItems)
+            {
+                string heading = item.Slide.Heading.Text;
+                string subHeading = item.Slide.SubHeading.Text;
+                string URL = item.Slide.URL.Text;
+                string img = string.Empty;
+                if (item.Slide.Image.Paths.Count > 0)
+                    img = item.Slide.Image.Paths[0];
+
+                <!-- Page Banner Slide -->
+                <a href="@URL">
+                    <div class="page-banner__slide position-relative d-flex align-items-center" style="background-image: url(/media/@img)">
+                        <div class="container py-5">
+                            <div class="page-banner__overlay position-absolute start-0 top-0 w-100 h-100 d-none"></div>
+                            <div class="page-banner__container position-relative z-1">
+                                <h2 class="page-banner__heading fs-1 text-primary fw-normal mb-3 lh-1">@heading</h2>
+                                <h4 class="text-secondary page-banner__subheading fw-normal mb-0">@subHeading</h4>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Page Banner Slide -->
+            }
+        }
+    </div>
+    <!-- Owl Carousel -->
+</div>
+<!-- Page Banner -->

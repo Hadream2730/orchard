@@ -1,0 +1,400 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Localization\" />
+  </ItemGroup>
+
+  <!-- Watcher include and excludes -->
+  <ItemGroup>
+      <Watch Include="**\*.cs" Exclude="Recipes\**;Assets\**;node_modules\**\*;**\*.js.map;obj\**\*;bin\**\*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\API\ApiKeyAttribute.cs" />
+    <Content Remove="wwwroot\API\ApiKeyAuthorizationFilter.cs" />
+    <Content Remove="wwwroot\API\ApiKeyValidator.cs" />
+    <Content Remove="wwwroot\API\StoreController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\content\fonts\AWConquerorInlineRegular.svg" />
+    <None Include="wwwroot\content\fonts\AWConquerorInlineRegular.woff2" />
+    <None Include="wwwroot\content\fonts\NexaBold.svg" />
+    <None Include="wwwroot\content\fonts\NexaBold.woff2" />
+    <None Include="wwwroot\content\fonts\NexaLight.svg" />
+    <None Include="wwwroot\content\fonts\NexaLight.woff2" />
+    <None Include="wwwroot\content\fonts\NexaRegular.svg" />
+    <None Include="wwwroot\content\fonts\NexaRegular.woff2" />
+    <None Include="wwwroot\content\images\icons\bulb.svg" />
+    <None Include="wwwroot\content\images\icons\bus.svg" />
+    <None Include="wwwroot\content\images\icons\calendar.svg" />
+    <None Include="wwwroot\content\images\icons\chart-up.svg" />
+    <None Include="wwwroot\content\images\icons\check-dark.svg" />
+    <None Include="wwwroot\content\images\icons\check.svg" />
+    <None Include="wwwroot\content\images\icons\chevron-down.svg" />
+    <None Include="wwwroot\content\images\icons\clock.svg" />
+    <None Include="wwwroot\content\images\icons\close.svg" />
+    <None Include="wwwroot\content\images\icons\commuity-club.svg" />
+    <None Include="wwwroot\content\images\icons\direct-connectivity.svg" />
+    <None Include="wwwroot\content\images\icons\facebook-primary.svg" />
+    <None Include="wwwroot\content\images\icons\facebook.svg" />
+    <None Include="wwwroot\content\images\icons\home.svg" />
+    <None Include="wwwroot\content\images\icons\location.svg" />
+    <None Include="wwwroot\content\images\icons\location2.svg" />
+    <None Include="wwwroot\content\images\icons\logo-icon.svg" />
+    <None Include="wwwroot\content\images\icons\neighbourhood-police-centre.svg" />
+    <None Include="wwwroot\content\images\icons\phone.svg" />
+    <None Include="wwwroot\content\images\icons\phone2.svg" />
+    <None Include="wwwroot\content\images\icons\retail-and-dining.svg" />
+    <None Include="wwwroot\content\images\icons\share-alt.svg" />
+    <None Include="wwwroot\content\images\icons\share.svg" />
+    <None Include="wwwroot\content\images\icons\taxi.svg" />
+    <None Include="wwwroot\content\images\icons\the-woodleigh-residences.svg" />
+    <None Include="wwwroot\content\images\icons\times.svg" />
+    <None Include="wwwroot\content\images\icons\train.svg" />
+    <None Include="wwwroot\content\images\icons\whatsapp-primary.svg" />
+    <None Include="wwwroot\content\images\icons\whatsapp.svg" />
+    <None Include="wwwroot\content\images\logo.svg" />
+    <None Include="wwwroot\content\scss\bootstrap\forms\_floating-labels.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\forms\_form-check.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\forms\_form-control.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\forms\_form-range.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\forms\_form-select.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\forms\_form-text.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\forms\_input-group.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\forms\_labels.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\forms\_validation.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\helpers\_clearfix.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\helpers\_color-bg.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\helpers\_colored-links.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\helpers\_position.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\helpers\_ratio.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\helpers\_stacks.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\helpers\_stretched-link.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\helpers\_text-truncation.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\helpers\_visually-hidden.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\helpers\_vr.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_alert.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_backdrop.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_banner.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_border-radius.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_box-shadow.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_breakpoints.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_buttons.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_caret.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_clearfix.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_color-scheme.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_container.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_deprecate.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_forms.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_gradients.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_grid.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_image.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_list-group.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_lists.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_pagination.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_reset-text.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_resize.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_table-variants.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_text-truncate.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_transition.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_utilities.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\mixins\_visually-hidden.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\utilities\_api.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\vendor\_rfs.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_accordion.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_alert.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_badge.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_bootstrap-grid.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_bootstrap-reboot.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_bootstrap-utilities.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_bootstrap.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_breadcrumb.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_button-group.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_buttons.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_card.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_carousel.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_close.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_containers.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_dropdown.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_forms.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_functions.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_grid.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_helpers.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_images.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_list-group.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_maps.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_mixins.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_modal.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_nav.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_navbar.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_offcanvas.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_pagination.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_placeholders.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_popover.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_progress.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_reboot.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_root.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_spinners.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_tables.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_toasts.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_tooltip.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_transitions.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_type.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_utilities.scss" />
+    <None Include="wwwroot\content\scss\bootstrap\_variables.scss" />
+    <None Include="wwwroot\content\scss\develoer.scss" />
+    <None Include="wwwroot\content\scss\layout\_footer.scss" />
+    <None Include="wwwroot\content\scss\layout\_header.scss" />
+    <None Include="wwwroot\content\scss\layout\_page-banner.scss" />
+    <None Include="wwwroot\content\scss\mixins\_border-radius.scss" />
+    <None Include="wwwroot\content\scss\mixins\_box-shadow.scss" />
+    <None Include="wwwroot\content\scss\mixins\_media-queries.scss" />
+    <None Include="wwwroot\content\scss\mixins\_transform.scss" />
+    <None Include="wwwroot\content\scss\mixins\_transition.scss" />
+    <None Include="wwwroot\content\scss\mixins\_triangle.scss" />
+    <None Include="wwwroot\content\scss\mixins\_utilities.scss" />
+    <None Include="wwwroot\content\scss\modules\_accordion.scss" />
+    <None Include="wwwroot\content\scss\modules\_buttons.scss" />
+    <None Include="wwwroot\content\scss\modules\_card.scss" />
+    <None Include="wwwroot\content\scss\modules\_cookie-policy.scss" />
+    <None Include="wwwroot\content\scss\modules\_form.scss" />
+    <None Include="wwwroot\content\scss\modules\_lists.scss" />
+    <None Include="wwwroot\content\scss\modules\_main-navigation.scss" />
+    <None Include="wwwroot\content\scss\modules\_menu-bar.scss" />
+    <None Include="wwwroot\content\scss\modules\_owl-carousel.scss" />
+    <None Include="wwwroot\content\scss\modules\_popup.scss" />
+    <None Include="wwwroot\content\scss\modules\_scrollbar.scss" />
+    <None Include="wwwroot\content\scss\modules\_sections.scss" />
+    <None Include="wwwroot\content\scss\modules\_selectbox.scss" />
+    <None Include="wwwroot\content\scss\modules\_tab-navigation.scss" />
+    <None Include="wwwroot\content\scss\site.scss" />
+    <None Include="wwwroot\content\scss\utilities\_cross-browsers.scss" />
+    <None Include="wwwroot\content\scss\utilities\_generic-classes.scss" />
+    <None Include="wwwroot\content\scss\utilities\_icons.scss" />
+    <None Include="wwwroot\content\scss\utilities\_settings.scss" />
+    <None Include="wwwroot\content\scss\utilities\_variables.scss" />
+    <None Include="wwwroot\form\contact.php" />
+    <None Include="wwwroot\scripts\contact-form.js" />
+    <None Include="wwwroot\scripts\customDeveloper.js" />
+    <None Include="wwwroot\scripts\custom.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\.gitattributes" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\.gitignore" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\.travis.yml" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\CONTRIBUTING.md" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\dist\LICENSE" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\dist\owl.carousel.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\dist\owl.carousel.min.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\dist\README.md" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs\assets\js\app.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs\assets\js\foundation.min.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs\assets\owlcarousel\owl.carousel.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs\assets\owlcarousel\owl.carousel.min.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs\assets\owlcarousel\README.md" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs\assets\vendors\foundation.min.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs\assets\vendors\highlight.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs\assets\vendors\jquery.min.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs\assets\vendors\jquery.min.map" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs\assets\vendors\jquery.mousewheel.min.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\assets\js\app.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\assets\js\foundation.min.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\assets\scss\custom.scss" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\assets\scss\demos.scss" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\assets\scss\docs.scss" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\assets\scss\docs.theme.scss" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\assets\scss\highlight.scss" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\assets\scss\_settings.scss" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\assets\vendors\foundation.min.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\assets\vendors\highlight.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\assets\vendors\jquery.min.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\assets\vendors\jquery.min.map" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\assets\vendors\jquery.mousewheel.min.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\helpers\modulo.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\helpers\test.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\layouts\demos.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\layouts\docs.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\layouts\home.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\animate.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\autoheight.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\autoplay.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\autowidth.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\basic.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\center.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\demos.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\events.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\lazyLoad.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\merge.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\mousewheel.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\responsive.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\rtl.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\stagepadding.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\test.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\urlhashnav.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\video.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\api-classes.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\api-events.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\api-options.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\dev-buildin-plugins.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\dev-external.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\dev-plugin-api.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\dev-styles.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\started-faq.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\started-installation.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\started-welcome.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\support-changelog.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\support-contact.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\support-contributing.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\index.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\footer.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\head.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\header.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\home-carousel.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\home-features.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\home-hero.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\home-teaser-text.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\javascripts.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\releated-docs.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\sidenav-docs.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\title.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\vendors.hbs" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\Gruntfile.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\ISSUE_TEMPLATE.md" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\LICENSE" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\README.md" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\ROADMAP.md" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\js\.jscsrc" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\js\.jshintrc" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\js\owl.animate.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\js\owl.autoheight.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\js\owl.autoplay.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\js\owl.autorefresh.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\js\owl.carousel.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\js\owl.hash.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\js\owl.lazyload.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\js\owl.navigation.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\js\owl.support.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\js\owl.support.modernizr.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\js\owl.video.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\scss\owl.carousel.scss" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\scss\owl.theme.default.scss" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\scss\owl.theme.green.scss" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\scss\_animate.scss" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\scss\_autoheight.scss" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\scss\_core.scss" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\scss\_lazyload.scss" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\scss\_theme.default.scss" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\scss\_theme.green.scss" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\scss\_theme.scss" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\src\scss\_video.scss" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\test\unit\autoplay.js" />
+    <None Include="wwwroot\scripts\plugins\OwlCarousel2-2.3.4\test\unit\core.js" />
+    <None Include="wwwroot\scripts\search.js" />
+    <None Include="wwwroot\scripts\stores.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CookieConsent.OrchardCore" Version="1.5.0" />
+    <PackageReference Include="OrchardCore.ContentManagement" Version="1.5.0" />
+    <PackageReference Include="OrchardCore.DisplayManagement" Version="1.5.0" />
+    <PackageReference Include="OrchardCore.Logging.NLog" Version="1.5.0" />
+    <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.5.0" />
+    <PackageReference Include="OrchardCore.Menu" Version="1.5.0" />
+    <PackageReference Include="OrchardCore.ResourceManagement" Version="1.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WoodleighMallTheme\WoodleighMallTheme.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ResolvedFileToPublish Remove="App_Data\Sites\Default\Media\Cedele 01-38.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ResolvedFileToPublish Remove="App_Data\Sites\Default\Media\Dancepointe Academy 01-16_17.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ResolvedFileToPublish Remove="App_Data\Sites\Default\Media\Hi NOODLES 01-27_28.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ResolvedFileToPublish Remove="App_Data\Sites\Default\Media\Kicks Taekwondo01-05_06.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ResolvedFileToPublish Remove="App_Data\Sites\Default\Media\Mavis Tutorial Centre 01-09.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ResolvedFileToPublish Remove="App_Data\Sites\Default\Media\Melvados B1-07A.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ResolvedFileToPublish Remove="App_Data\Sites\Default\Media\SnacKING Retro Biscuits B1K46.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ResolvedFileToPublish Remove="App_Data\Sites\Default\Media\UOB 01-43.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ResolvedFileToPublish Remove="App_Data\Sites\Default\Media\Vienna Music School 01-44_45.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ResolvedFileToPublish Remove="App_Data\Sites\Default\Media\Cedele 01-38.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ResolvedFileToPublish Remove="App_Data\Sites\Default\Media\Dancepointe Academy 01-16_17.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ResolvedFileToPublish Remove="App_Data\Sites\Default\Media\Hi NOODLES 01-27_28.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ResolvedFileToPublish Remove="App_Data\Sites\Default\Media\Kicks Taekwondo01-05_06.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ResolvedFileToPublish Remove="App_Data\Sites\Default\Media\Mavis Tutorial Centre 01-09.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ResolvedFileToPublish Remove="App_Data\Sites\Default\Media\Melvados B1-07A.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ResolvedFileToPublish Remove="App_Data\Sites\Default\Media\SnacKING Retro Biscuits B1K46.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ResolvedFileToPublish Remove="App_Data\Sites\Default\Media\UOB 01-43.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ResolvedFileToPublish Remove="App_Data\Sites\Default\Media\Vienna Music School 01-44_45.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Watch Remove="wwwroot\API\ApiKeyAttribute.cs" />
+    <Watch Remove="wwwroot\API\ApiKeyAuthorizationFilter.cs" />
+    <Watch Remove="wwwroot\API\ApiKeyValidator.cs" />
+    <Watch Remove="wwwroot\API\StoreController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="wwwroot\API\ApiKeyAttribute.cs" />
+    <Compile Include="wwwroot\API\ApiKeyAuthorizationFilter.cs" />
+    <Compile Include="wwwroot\API\ApiKeyValidator.cs" />
+    <Compile Include="wwwroot\API\StoreController.cs" />
+  </ItemGroup>
+
+</Project>

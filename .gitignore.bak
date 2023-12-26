@@ -1,0 +1,20 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/WoodleighMall/v17/.suo
+/WoodleighMall/bin/Debug/net6.0/WoodleighMallTheme.dll
+/WoodleighMall/bin/Debug/net6.0/WoodleighMallTheme.pdb
+/WoodleighMall/obj/Debug/net6.0/WoodleighMall.csproj.AssemblyReference.cache
+/WoodleighMallTheme/bin/Debug/net6.0/WoodleighMallTheme.dll
+/WoodleighMallTheme/bin/Debug/net6.0/WoodleighMallTheme.pdb
+/WoodleighMallTheme/obj/Debug/net6.0/WoodleighMallTheme.dll
+/WoodleighMallTheme/obj/Debug/net6.0/WoodleighMallTheme.pdb
+/WoodleighMall/bin/Debug/net6.0/WoodleighMall.dll
+/WoodleighMall/bin/Debug/net6.0/WoodleighMall.pdb
+/WoodleighMall/obj/Debug/net6.0/WoodleighMall.dll
+/WoodleighMall/obj/Debug/net6.0/WoodleighMall.pdb
+/WoodleighMallTheme/obj/Debug/net6.0/ref/WoodleighMallTheme.dll
+/WoodleighMallTheme/obj/Debug/net6.0/refint/WoodleighMallTheme.dll
+/WoodleighMall/App_Data/logs/internal-nlog.txt
+.vs/*

@@ -1,0 +1,22 @@
+﻿@model SearchIndexViewModel
+@inject IContentItemDisplayManager DisplayManager
+<div class="py-5">
+    <div class="container my-md-5">
+        @await DisplayAsync(Model.SearchForm)
+        @if (!string.IsNullOrEmpty(@Model.Terms))
+        {
+            <h1 class="fs-5 fw-normal mt-3 mt-md-5 py-4 text-gray border-bottom border-primary">Search Results for "@Model.Terms"</h1>
+        }
+        else
+        {
+            <!-- No Result Found -->
+            <div class="mt-4 mt-md-5">
+                <h5>No matches</h5>
+                <p><em>Please try another search.</em></p>
+            </div>
+            <!-- No Result Found -->
+        }
+        @await DisplayAsync(Model.SearchResults)
+    </div>
+</div>
+

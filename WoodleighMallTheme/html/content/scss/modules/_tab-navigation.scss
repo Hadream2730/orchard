@@ -1,0 +1,21 @@
+.tab-navigation--type2 .tab-head {
+	li {
+		border-bottom: 4px solid transparent;
+		@include media-breakpoint-down(md) {
+			font-size: 0.9rem;
+			border-bottom-width: 2px;
+		}
+		&.active {
+			border-color: #3265FF;
+		}
+		&:first-child {
+			color: #AA38E6;
+		}
+		&:nth-child(2) {
+			color: #3265FF;
+		}
+		&:nth-child(3) {
+			color: #00FFCB;
+		}
+	}
+}

@@ -1,0 +1,9 @@
+.site-accordion__content {
+	display: none;
+}
+
+.site-accordion__heading.active {
+	.site-accordion__icon {
+		@include rotate(180);
+	}
+}

@@ -1,0 +1,21 @@
+﻿@using OrchardCore.Entities
+@using OrchardCore.ContentManagement
+@using OrchardCore.Flows.Models
+@using Newtonsoft.Json.Linq
+@using System.Linq
+
+@inject OrchardCore.ContentManagement.Display.IContentItemDisplayManager ContentItemDisplayManager
+@{
+    string title = Model.ContentItem.Content.TitlePart?.Title?.Value;
+    string description = Model.ContentItem.Content.IconBlock?.Description?.Text;
+    string icon = string.Empty;
+    if (Model.ContentItem.Content.IconBlock.Icon.Paths.Count > 0)
+        icon = Model.ContentItem.Content.IconBlock.Icon.Paths[0];
+}
+<div class="col-lg-3 col-6 mt-5">
+    <img asset-src="@icon" width="70" alt="@title" />
+    <strong class="d-block text-info mb-2 mt-3 fs-5">@title</strong>
+    <span class="d-block">@description</span>
+</div>
+
+

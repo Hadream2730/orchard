@@ -1,0 +1,39 @@
+﻿@using OrchardCore.Entities
+@using OrchardCore.ContentManagement
+@using OrchardCore.Flows.Models
+@using Newtonsoft.Json.Linq
+@using System.Linq
+
+@inject OrchardCore.ContentManagement.Display.IContentItemDisplayManager ContentItemDisplayManager
+@{
+    string title = Model.ContentItem.Content.ImageBlock?.Title?.Text.Value;
+    string description = Model.ContentItem.Content.ImageBlock?.Description?.Text;
+    string img = string.Empty;
+    if (Model.ContentItem.Content.ImageBlock.Image.Paths.Count > 0)
+        img = Model.ContentItem.Content.ImageBlock.Image.Paths[0];
+    string url = Model.ContentItem.Content.ImageBlock?.URL?.Text;
+}
+<!-- Card -->
+<div class="col-md-4 mt-3">
+    <div class="bg-white shadow-sm p-3 p-md-4 h-100 d-flex flex-column align-items-start justify-content-between">
+        <div class="mb-3">
+            <div class="h-9rem h-lg-14rem mb-3">
+                @if (!string.IsNullOrEmpty(img))
+                {
+                    <img asset-src="@img" class="w-100 h-100 object-fit-cover" alt="Store" />
+                }
+                else
+                {
+                    <img class="w-100 h-100 object-fit-cover" src="content/images/stores.jpg" alt="Store" />
+                }
+            </div>
+            <h4 class="mb-2 mb-md-4 fs-15px-sm">@title</h4>
+            <p class="mb-2 pb-1 pb-md-0 mb-md-3">@description</p>
+        </div>
+        <a href="@url" class="btn btn-outline-primary rounded-5 py-md-2 px-md-4 mb-2 mb-md-0">
+            Learn
+            More
+        </a>
+    </div>
+</div>
+<!-- Card -->

@@ -1,0 +1,60 @@
+﻿@{
+    var title = Model.ContentItem.Content.TitlePart.Title.Value;
+    var description = Model.ContentItem.Content.Promotion.Description.Html;
+    string img = string.Empty;
+    if (Model.ContentItem.Content.Promotion.Image.Paths.Count > 0)
+        img = Model.ContentItem.Content.Promotion.Image.Paths[0];
+    string startDate = string.Empty, endDate = string.Empty;
+    DateTime? sDate = null, eDate = null;
+    if (Model.ContentItem.Content.Promotion.StartDate != null)
+    {
+        startDate = Model.ContentItem.Content.Promotion.StartDate.Value;
+        sDate = DateTime.Parse(startDate);
+    }
+    if (Model.ContentItem.Content.Promotion.EndDate != null)
+    {
+        endDate = Model.ContentItem.Content.Promotion.EndDate.Value;
+        eDate = DateTime.Parse(endDate);
+    }
+
+    var curDate = System.DateTime.Now;
+    var sDateText = sDate.Value.Year == eDate.Value.Year ? sDate.Value.ToString("dd MMMM") : sDate.Value.ToString("dd MMMM yyyy");
+    var eDateText = eDate.Value.ToString("dd MMMM yyyy");
+    var strDate = sDateText + " - " + eDateText;
+    var detailPagePath = Model.ContentItem.Content.AutoroutePart.Path.Value;
+}
+<!-- Card -->
+<div class="col-lg-4 col-md-6 mt-3">
+    <div class="bg-white shadow-sm rounded card h-100 d-flex flex-column justify-content-between align-items-start">
+        <div>
+            <div class="h-9rem h-md-17rem h-lg-21rem rounded-top">
+                @if (!string.IsNullOrEmpty(img))
+                {
+                    <img asset-src="@img" class="w-100 h-100 object-fit-cover rounded-top card__img" alt="@title" />
+                }
+                else
+                {
+                    <img class="w-100 h-100 object-fit-cover rounded-top card__img" src="/content/images/promotions/1.jpg" alt="Lorem ipsum" />
+                }
+            </div>
+            <div class="py-4 px-3 px-md-5">
+                <h5 class="text-primary mb-0 fs-15px-sm card__heading">
+                    @title
+                </h5>
+                <div class="mt-3 mb-3 text-gray card__description text-3-lines">
+                    <time class="d-block">@strDate</time>
+                    <div class="card-display-none d-none text-black">
+                        @Html.Raw(description)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="px-3 px-md-5 pb-3">
+            <a href="@detailPagePath" class="btn btn-outline-primary rounded-5 py-md-3 px-md-5 mb-3">
+                Learn
+                More
+            </a>
+        </div>
+    </div>
+</div>
+<!-- Card -->

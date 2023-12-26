@@ -1,0 +1,130 @@
+.spotlight-section__img {
+	z-index: -1;
+    max-width: 26vw;
+    bottom: -8rem;
+    left: -9vw;
+    @include media-breakpoint-down(md) {
+   	max-width: 83vw;
+    bottom: -6rem;
+    left: -49vw;
+    }
+}
+
+.events-section__img, .happenings-detail-section__img {
+    z-index: -1;
+    max-width: 26vw;
+    bottom: 0;
+    right: -5vw;
+    @include media-breakpoint-down(md) {
+        max-width: 23rem;
+        right: -5rem;
+    }
+}
+
+.happenings-detail-section__img {
+    max-width: 20vw;
+    @include media-breakpoint-down(md) {
+        max-width: 18rem;
+        right: -5rem;
+    }
+}
+
+.section-bg {
+    background-color: #FDFBF5;
+}
+
+.contact-section__card {
+    margin-top: -35rem;
+    @include media-breakpoint-down(md) {
+        margin-top: -26rem;
+    }
+}
+
+.contact-section__img {
+    max-width: 18vw;
+    @include media-breakpoint-down(xl) {
+        max-width: 30vw;
+    }
+    @include media-breakpoint-down(md) {
+        max-width: 70%;
+    }
+}
+
+
+.section-card__img {
+    height: 5rem;
+    @include media-breakpoint-down(md) {
+        height: 3rem;
+    }
+}
+
+.section-card__heading {
+min-height: 3.6rem;
+@include media-breakpoint-down(md) {
+    min-height: auto;
+    font-size: 15px;
+}
+}
+
+.glance-section__img, .sustainability-section__img {
+    max-width: 37rem;
+    right: -9rem;
+    bottom: -2rem;
+    z-index: -1;
+}
+
+.sustainability-section__img {
+    right: -6rem;
+    bottom: -13rem;
+    @include media-breakpoint-down(xl) {
+        max-width: 26rem;
+    }
+   @include media-breakpoint-down(md) {
+     max-width: 36rem;
+    right: -21rem;
+    bottom: -26rem;
+   } 
+}
+
+.section-404 {
+    min-height: 50rem;
+    @include media-breakpoint-down(md) {
+        min-height: 36rem;
+    }
+}
+
+.section-404__icon {
+    bottom: -21rem;
+    right: -5rem;
+    max-width: 47rem;
+    @include media-breakpoint-down(md) {
+        max-width: 33rem;
+    }
+}
+
+.section-404__big-text {
+    font-size: 18vw;
+    margin-top: -2rem;
+    @include media-breakpoint-down(md) {
+        font-size: 11rem;
+    }
+}
+
+
+.store-alphabet-filters {
+    li {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+
+.stores-banner__icon {
+    max-width: 25rem;
+    right: -7rem;
+    top: -5rem;
+    @include rotate(-120);
+    @include media-breakpoint-down(sm) {
+        max-width: 18rem;
+    }
+}

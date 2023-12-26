@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8" />
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="theme-color" content="#003a70" />
+
+	<link rel="shortcut icon" href="content/favicons/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="content/favicons/afavicons/pple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="content/favicons/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="content/favicons/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="content/favicons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="content/favicons/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="content/favicons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="content/favicons/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="content/favicons/apple-touch-icon-152x152.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="content/favicons/apple-touch-icon-180x180.png" />
+
+	<title>Stores | The Woodleigh Mall</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="content/css/site.css" />
+</head>
+
+<body class="d-flex flex-column justify-content-between min-vh-100">
+
+	<!-- Header -->
+	<header
+		class="site-header shadow bg-white transition position-fixed top-0 start-0 w-100 w-100 top-0 py-3 py-md-4 z-3">
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row align-items-center">
+
+				<!-- Logo -->
+				<div class="col-4 col-lg-8 d-flex align-items-center justify-content-between">
+					<a href="index.html"><img class="logo" width="156" src="content/images/logo.svg" alt="Logo" /></a>
+
+					<!-- Main Navigation -->
+					<nav class="main-navigation bg-white transition top-0 w-100 text-center text-xl-start">
+						<ul class="nav-menu d-xl-flex justify-content-end list-unstyled fw-bold text-uppercase">
+							<li class="nav-menu__item nav-item__item--active mt-5 mt-lg-0 me-lg-4 pe-lg-2"><a
+									href="stores.html">Stores</a>
+							</li>
+							<li class="nav-menu__item mt-5 mt-xl-0 me-xl-4 pe-xl-2"><a
+									href="happenings.html">Happenings</a>
+								<ul class="nav-menu__dropdown mt-4 mt-xl-0 mb-0 position-xl-absolute start-0 text-start d-table mx-auto bg-white z-1 border-xl border-top-0">
+								<li><a class="p-3 border-xl-top d-block" href="happenings.html#promotions">Promotions</a></li>
+								<li><a class="p-3 border-xl-top d-block" href="happenings.html#events">Events</a></li>
+								</ul>
+								</li>
+							<li class="nav-menu__item mt-5 mt-xl-0 me-xl-4 pe-xl-2"><a href="visit.html">Visit Us</a></li>
+							<li class="nav-menu__item mt-5 mt-xl-0 me-xl-4 pe-xl-2"><a href="contact.html">Contact Us</a>
+							</li>
+						</ul>
+					</nav>
+					<!-- Main Navigation -->
+
+				</div>
+				<!-- Logo -->
+
+				<!-- Search and Menu Trigger -->
+				<div class="col-8 ps-0 col-lg-4 d-flex align-items-center justify-content-end">
+
+					<!-- Search -->
+					<div class="header__search w-100 position-relative">
+						<input type="text" class="form-control form-control-sm rounded-5 ps-3 lh-1 search-input"
+							placeholder="Type here" />
+						<button type="button"
+							class="btn btn-primary btn-sm fs-base rounded-5 position-absolute translate-middle-y top-50 end-0 me-0 me-md-1 search-btn">Search</button>
+					</div>
+					<!-- Search -->
+
+					<!-- Menu Trigger -->
+					<div class="menu-bar mobile-menu-toggle d-xl-none ms-3 ms-md-4">
+						<span class="menu-bar__line menu-bar__line--first d-block"></span>
+						<span class="menu-bar__line menu-bar__line--second d-block"></span>
+						<span class="menu-bar__line menu-bar__line--third d-block"></span>
+					</div>
+					<!-- Menu Trigger -->
+
+				</div>
+				<!-- Search and Menu Trigger -->
+
+			</div>
+			<!-- Row -->
+
+		</div>
+	</header>
+	<!-- Header -->
+
+	<!-- Main Content -->
+	<div class="body-content">
+
+		<!-- Page Banner -->
+		<div class="page-banner sustainability-banner page-banner--fullscreen d-flex align-items-center position-relative overflow-hidden">
+			<img class="position-absolute object-fit-cover h-100 w-100" src="content/images/stores-banner-bg.jpg"
+				alt="Your daily must-haves" />
+			<div class="page-banner__heading-wrapper shadow position-absolute start-0 top-50 translate-middle-y bg-white">
+			</div>
+			<div class="container position-relative z-1">
+			<div class="row">
+			<div class="col-10 col-lg-6">
+				<h1 class="page-banner__heading fw-normal mb-0 lh-1">Your daily must-haves</h1>
+			</div>
+			</div>
+			</div>
+			<img class="stores-banner__icon position-absolute" src="content/images/site-icon.png" alt="Icon" />
+		</div>
+		<!-- Page Banner -->
+
+		<!-- Section -->
+		<div class="py-4 py-md-5">
+			<div class="container my-md-4">
+
+				<!-- Tabs -->
+				<div class="tab-navigation stores-tab">
+
+					<!-- Tab Head -->
+					<div class="d-flex justify-content-center justify-content-md-start flex-wrap tab-head">
+						<button type="button" data-label=".tab-pane-level"
+							class="tab-head__item btn btn-outline-primary active rounded-5 me-2 me-md-4">Level</button>
+						<button type="button" data-label=".tab-pane-categories"
+							class="tab-head__item btn btn-outline-primary rounded-5 me-md-4">Categories</button>
+						<!-- <button type="button" data-label=".tab-pane-cpm"
+							class="tab-head__item btn btn-outline-primary rounded-5 mt-3 mt-md-0">CPM Voucher
+							Acceptance</button> -->
+					</div>
+					<!-- Tab Head -->
+
+					<!-- Tab Content -->
+					<div class="tab-content mt-5">
+
+						<!-- Level Tab Pane -->
+						<div class="tab-pane d-block tab-pane-level">
+
+							<!-- Selectbox -->
+							<div class="row">
+								<div class="col-xl-2 col-lg-3 col-md-4">
+									<select class="form-select stores-locations">
+										<option value="All">All Levels</option>
+										<option value="#B1">Basement 1</option>
+										<option value="#01">Level 1</option>
+										<option value="#02">Level 2</option>
+									</select>
+								</div>
+							</div>
+							<!-- Selectbox -->
+
+							<div class="py-2">
+								<hr class="border-primary my-4 opacity-100">
+							</div>
+
+							<!-- Select by Alphabets -->
+							<ul
+								class="d-flex justify-content-center flex-wrap fs-15px-sm lh-1 text-primary list-unstyled store-alphabet-filters">
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									A</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									B</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									C</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									D</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									E</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									F</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									G</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									H
+								</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									I</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									J</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									K</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									L</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									M</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									N</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									O</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									P</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									Q</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									R</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									S</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									T</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									U</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									V</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									W</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									X</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									Y</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									Z</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									#</li>
+							</ul>
+							<!-- Select by Alphabets -->
+
+
+						</div>
+						<!-- Level Tab Pane -->
+
+						<!-- Level Tab Pane -->
+						<div class="tab-pane d-none tab-pane-categories">
+
+							<!-- Selectbox -->
+							<div class="row">
+								<div class="col-xl-3 col-lg-4 col-md-5">
+									<select class="form-select stores-categories">
+										<option value="All">All Categories</option>
+										<option value="Bank, Services & Others">Bank, Services & Others</option>
+										<option value="Beauty Essentials, Health & Pharmacy">Beauty Essentials, Health &
+											Pharmacy</option>
+										<option value="Books, Stationery, Gifts & Hobbies">Books, Stationery, Gifts &
+											Hobbies</option>
+										<option value="Clinics">Clinics</option>
+										<option value="Confectionery, Specialties & Snacks">Confectionery, Specialties &
+											Snacks</option>
+										<option value="Electronics, Telecommication & IT">Electronics, Telecommication &
+											IT</option>
+										<option value="Fashion, Accessories & Shoes">Fashion, Accessories & Shoes
+										</option>
+										<option value="Food Court, Restaurant & Cafes">Food Court, Restaurant & Cafes
+										</option>
+										<option value="Hair & Beauty">Hair & Beauty</option>
+										<option value="Home, Lifestyle & Wellness">Home, Lifestyle & Wellness</option>
+										<option value="Kids & Enrichment Centres">Kids & Enrichment Centres</option>
+										<option value="Optical">Optical</option>
+										<option value="Supermarket">Supermarket</option>
+									</select>
+								</div>
+							</div>
+							<!-- Selectbox -->
+
+							<div class="py-2">
+								<hr class="border-primary my-4 opacity-100">
+							</div>
+
+							<!-- Select by Alphabets -->
+							<ul
+								class="d-flex justify-content-center flex-wrap fs-15px-sm lh-1 text-primary list-unstyled store-alphabet-filters">
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									A</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									B</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									C</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									D</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									E</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									F</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									G</li>
+								<li
+									class="cursor-pointer bg-primary text-white rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									H
+								</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									I</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									J</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									K</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									L</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									M</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									N</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									O</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									P</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									Q</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									R</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									S</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									T</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									U</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									V</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									W</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									X</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									Y</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									Z</li>
+								<li
+									class="cursor-pointer rounded-1 pt-2 pb-1 px-2 p-md-2 me-1 me-md-3 d-flex align-items-center justify-content-center">
+									#</li>
+							</ul>
+							<!-- Select by Alphabets -->
+
+
+						</div>
+						<!-- Level Tab Pane -->
+
+						<!-- Level Tab Pane -->
+						<div class="tab-pane d-none tab-pane-cpm">
+
+							<hr class="border-primary my-4 opacity-100">
+
+						</div>
+						<!-- Level Tab Pane -->
+
+					</div>
+					<!-- Tab Content -->
+
+
+					<!-- Cards -->
+					<div class="row">
+
+						<!-- Card -->
+						<div class="col-md-6 col-lg-6 col-xl-3 mt-3 store-card"
+							data-category=", 4h9vgkfy1v1hctkxsrhs5x3ymw" data-first-character="B" data-level="#B1"
+							data-cpm="False">
+							<div class="border p-3 p-md-4 h-100 d-flex flex-column justify-content-between">
+								<div>
+									<a href="#" class="d-block h-9rem h-lg-12rem">
+										<img class="w-100 h-100 object-fit-cover" alt="Store"
+											src="content/images/stores/Beans-Factory.jpg" />
+									</a>
+									<div class="mt-3">
+										<h5 class="mb-2 fw-md-normal fs-15px-sm store-card__name"><a href="#" target="_blank" class="text-dark">Beans.Factory</a></h5>
+										<p class="mb-0 text-muted fs-base store-card__category">Confectionery,
+											Specialties & Snacks</p>
+									</div>
+								</div>
+								<ul class="list-unstyled mt-3">
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--location2"></i>
+										</span>
+										<div class="text-gray pt-1 store-card__location">#B1-K43/K44</div>
+									</li>
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--clock"></i>
+										</span>
+										<div class="text-gray pt-1 store-card__time">8:00am to 4:00pm</div>
+									</li>
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--phone2"></i>
+										</span>
+										<a href="tel:+659898768778" class="text-gray pt-1 store-card__contact">+65 9898768778</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- Card -->
+
+						<!-- Card -->
+						<div class="col-md-6 col-lg-6 col-xl-3 mt-3 store-card"
+							data-category=", 4h9vgkfy1v1hctkxsrhs5x3ymw" data-first-character="B" data-level="#B1"
+							data-cpm="False">
+							<div class="border p-3 p-md-4 h-100 d-flex flex-column justify-content-between">
+								<div>
+									<a href="#" class="d-block h-9rem h-lg-12rem">
+										<img class="w-100 h-100 object-fit-cover" alt="Store"
+											src="content/images/stores/Boost-Juice-Bars.jpg" />
+									</a>
+									<div class="mt-3">
+										<h5 class="mb-2 fw-md-normal fs-15px-sm store-card__name"><a href="#" class="text-dark">Boost Juice Bars</a></h5>
+										<p class="mb-0 text-muted fs-base store-card__category">Confectionery,
+											Specialties & Snacks</p>
+									</div>
+								</div>
+								<ul class="list-unstyled mt-3">
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--location2"></i>
+										</span>
+										<div class="text-gray pt-1 store-card__location">#B1-K11</div>
+									</li>
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--clock"></i>
+										</span>
+										<div class="text-gray pt-1 store-card__time">8:00am to 4:00pm</div>
+									</li>
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--phone2"></i>
+										</span>
+										<a href="tel:+659898768778" class="text-gray pt-1 store-card__contact">+65 9898768778</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- Card -->
+
+						<!-- Card -->
+						<div class="col-md-6 col-lg-6 col-xl-3 mt-3 store-card"
+							data-category=", 4h9vgkfy1v1hctkxsrhs5x3ymw" data-first-character="B" data-level="#B1"
+							data-cpm="False">
+							<div class="border p-3 p-md-4 h-100 d-flex flex-column justify-content-between">
+								<div>
+									<a href="#" class="d-block h-9rem h-lg-12rem">
+										<img class="w-100 h-100 object-fit-cover" alt="Store"
+											src="content/images/stores/store-placeholder.jpg" />
+									</a>
+									<div class="mt-3">
+										<h5 class="mb-2 fw-md-normal fs-15px-sm store-card__name"><a href="#" class="text-dark">Bottles & Bottles</a></h5>
+										<p class="mb-0 text-muted fs-base store-card__category">Confectionery,
+											Specialties & Snacks</p>
+									</div>
+								</div>
+								<ul class="list-unstyled mt-3">
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--location2"></i>
+										</span>
+										<div class="text-gray pt-1 store-card__location">#B1-K47</div>
+									</li>
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--clock"></i>
+										</span>
+										<div class="text-gray pt-1 store-card__time">8:00am to 4:00pm</div>
+									</li>
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--phone2"></i>
+										</span>
+										<a href="tel:+659898768778" class="text-gray pt-1 store-card__contact">+65 9898768778</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- Card -->
+
+						<!-- Card -->
+						<div class="col-md-6 col-lg-6 col-xl-3 mt-3 store-card"
+							data-category=", 429kan86b2fdf242327gzpwsm5" data-first-character="E" data-level="#B1"
+							data-cpm="False">
+							<div class="border p-3 p-md-4 h-100 d-flex flex-column justify-content-between">
+								<div>
+									<a href="#" class="d-block h-9rem h-lg-12rem">
+										<img class="w-100 h-100 object-fit-cover" alt="Store"
+											src="content/images/stores/Eat.jpg" />
+									</a>
+									<div class="mt-3">
+										<h5 class="mb-2 fw-md-normal fs-15px-sm store-card__name"><a href="#" class="text-dark">Eat.</a></h5>
+										<p class="mb-0 text-muted fs-base store-card__category">Food Court, Restaurant &
+											Cafes</p>
+									</div>
+								</div>
+								<ul class="list-unstyled mt-3">
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--location2"></i>
+										</span>
+										<div class="text-gray pt-1 store-card__location">#B1-K40</div>
+									</li>
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--clock"></i>
+										</span>
+										<div class="text-gray pt-1 store-card__time">8:00am to 4:00pm</div>
+									</li>
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--phone2"></i>
+										</span>
+										<a href="tel:+659898768778" class="text-gray pt-1 store-card__contact">+65 9898768778</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- Card -->
+
+						<!-- Card -->
+						<div class="col-md-6 col-lg-6 col-xl-3 mt-3 store-card"
+							data-category=", 4j53brqm12mzm3m6swdd4vz6x2" data-first-character="F" data-level="#B1"
+							data-cpm="False">
+							<div class="border p-3 p-md-4 h-100 d-flex flex-column justify-content-between">
+								<div>
+									<a href="#" class="d-block h-9rem h-lg-12rem">
+										<img class="w-100 h-100 object-fit-cover" alt="Store"
+											src="content/images/stores/store-placeholder.jpg" />
+									</a>
+									<div class="mt-3">
+										<h5 class="mb-2 fw-md-normal fs-15px-sm store-card__name"><a href="#" class="text-dark">FairPrice Finest</a></h5>
+										<p class="mb-0 text-muted fs-base store-card__category">Supermarket</p>
+									</div>
+								</div>
+								<ul class="list-unstyled mt-3">
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--location2"></i>
+										</span>
+										<div class="text-gray pt-1 store-card__location">#B1-32/33</div>
+									</li>
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--clock"></i>
+										</span>
+										<div class="text-gray pt-1 store-card__time">8:00am to 4:00pm</div>
+									</li>
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--phone2"></i>
+										</span>
+										<a href="tel:+659898768778" class="text-gray pt-1 store-card__contact">+65 9898768778</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- Card -->
+						
+						<!-- Card -->
+						<div class="col-md-6 col-lg-6 col-xl-3 mt-3 store-card"
+							data-category=", 4s0zbwejwhf360bjyphvrsaam2" data-first-character="P" data-level="#02"
+							data-cpm="False">
+							<div class="border p-3 p-md-4 h-100 d-flex flex-column justify-content-between">
+								<div>
+									<a href="#" class="d-block h-9rem h-lg-12rem">
+										<img class="w-100 h-100 object-fit-cover" alt="Store"
+											src="content/images/stores/PULSE-TCM-Clinic-PULSE-Allied-Health-Clinic.png" />
+									</a>
+									<div class="mt-3">
+										<h5 class="mb-2 fw-md-normal fs-15px-sm store-card__name"><a href="#" class="text-dark">PULSE TCM Clinic</a></h5>
+										<p class="mb-0 text-muted fs-base store-card__category">Clinics</p>
+									</div>
+								</div>
+								<ul class="list-unstyled mt-3">
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--location2"></i>
+										</span>
+										<div class="text-gray pt-1 store-card__location">#02-29</div>
+									</li>
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--clock"></i>
+										</span>
+										<div class="text-gray pt-1 store-card__time">8:00am to 4:00pm</div>
+									</li>
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--phone2"></i>
+										</span>
+										<a href="tel:+659898768778" class="text-gray pt-1 store-card__contact">+65 9898768778</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- Card -->
+
+						<!-- Card -->
+						<div class="col-md-6 col-lg-6 col-xl-3 mt-3 store-card"
+							data-category=", 429kan86b2fdf242327gzpwsm5" data-first-character="Q" data-level="#B1"
+							data-cpm="False">
+							<div class="border p-3 p-md-4 h-100 d-flex flex-column justify-content-between">
+								<div>
+									<a href="#" class="d-block h-9rem h-lg-12rem">
+										<img class="w-100 h-100 object-fit-cover" alt="Store"
+											src="content/images/stores/Qin-Ji-Rougamo.png" />
+									</a>
+									<div class="mt-3">
+										<h5 class="mb-2 fw-md-normal fs-15px-sm store-card__name"><a href="#" class="text-dark">Qin Ji Rougamo</a></h5>
+										<p class="mb-0 text-muted fs-base store-card__category">Food Court, Restaurant &
+											Cafes</p>
+									</div>
+								</div>
+								<ul class="list-unstyled mt-3">
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--location2"></i>
+										</span>
+										<div class="text-gray pt-1 store-card__location">#B1-K35/K36</div>
+									</li>
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--clock"></i>
+										</span>
+										<div class="text-gray pt-1 store-card__time">8:00am to 4:00pm</div>
+									</li>
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--phone2"></i>
+										</span>
+										<a href="tel:+659898768778" class="text-gray pt-1 store-card__contact">+65 9898768778</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- Card -->
+
+						<!-- Card -->
+						<div class="col-md-6 col-lg-6 col-xl-3 mt-3 store-card"
+							data-category=", 429kan86b2fdf242327gzpwsm5" data-first-character="S" data-level="#01"
+							data-cpm="False">
+							<div class="border p-3 p-md-4 h-100 d-flex flex-column justify-content-between">
+								<div>
+									<a href="#" class="d-block h-9rem h-lg-12rem">
+										<img class="w-100 h-100 object-fit-cover" alt="Store"
+											src="content/images/stores/Starbucks.png" />
+									</a>
+									<div class="mt-3">
+										<h5 class="mb-2 fw-md-normal fs-15px-sm store-card__name"><a href="#" class="text-dark">Starbucks</a></h5>
+										<p class="mb-0 text-muted fs-base store-card__category">Food Court, Restaurant &
+											Cafes</p>
+									</div>
+								</div>
+								<ul class="list-unstyled mt-3">
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--location2"></i>
+										</span>
+										<div class="text-gray pt-1 store-card__location">#01-01</div>
+									</li>
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--clock"></i>
+										</span>
+										<div class="text-gray pt-1 store-card__time">8:00am to 4:00pm</div>
+									</li>
+									<li class="ps-5 position-relative mb-3">
+										<span class="position-absolute start-0 top-0">
+											<i class="icon-block icon-block--phone2"></i>
+										</span>
+										<a href="tel:+659898768778" class="text-gray pt-1 store-card__contact">+65 9898768778</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- Card -->
+						
+					</div>
+					<!-- Cards -->
+
+				</div>
+				<!-- Tabs -->
+
+			</div>
+		</div>
+		<!-- Section -->
+
+	</div>
+	<!-- Main Content -->
+
+	<!-- Footer -->
+	<footer class="site-footer py-3 py-md-3 bg-primary text-white text-center text-md-start">
+		<div class="container">
+
+			<!-- Top Area -->
+			<div class="row">
+				<div class="col-md-3 my-3 my-md-4">
+					<a href="index.html" class="filter-white"><img class="footer__logo" src="content/images/logo.svg"
+							alt="Logo" /></a>
+				</div>
+				<div class="col-md-9">
+					<div class="row">
+						<div class="col-md-3 my-3 my-md-4">
+							<h5>ABOUT US</h5>
+							<ul class="list-unstyled">
+								<li class="mt-2"><a href="at-a-glance.html" class="text-white">At A Glance</a></li>
+								<li class="mt-2"><a href="sustainability.html" class="text-white">Sustainability</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-5 my-3 my-md-4">
+							<h5>CONTACT US</h5>
+							<ul class="list-unstyled footer__contact position-relative text-start">
+								<li class="mt-2">
+									<i class="icon-block icon-block--location position-absolute start-0"></i>
+									<span>11 Bidadari Park Drive, Singapore (S) 367803</span>
+								</li>
+								<li class="mt-3">
+									<i class="icon-block icon-block--phone position-absolute start-0"></i>
+									<a href="tel:6563020129" class="text-white">(65) 6302 0129</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-3 my-3 my-md-4">
+							<h5>CONNECT WITH US</h5>
+							<ul
+								class="list-unstyled d-flex justify-content-center justify-content-md-start footer__social">
+								<li class="me-3"><a href="https://www.facebook.com/thewoodleighmall"
+										target="_blank"><img width="40" src="content/images/icons/facebook.png"
+											alt="Facebook" /></a></li>
+								<li><a href="https://www.instagram.com/thewoodleighmall/" target="_blank"><img
+											width="40" src="content/images/icons/instagram.png" alt="Instagram" /></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Top Area -->
+
+			<hr class="my-md-0 border-white">
+
+			<!-- Bottom Area -->
+			<div class="row align-items-end fs-base">
+
+				<div class="col-md-5 my-2 my-md-4">
+					<p class="mb-0">&copy; The Woodleigh Mall 2023</p>
+					<p class="mb-0">Straits Retail Property Management Services Pte Ltd</p>
+				</div>
+
+				<div class="col-md-7 my-2 my-md-4">
+
+					<nav>
+						<ul class="list-unstyled footer__links d-flex justify-content-center justify-content-md-end">
+							<li class="pe-3"><a href=" https://www.cuscadenpeak.com/terms-of-use" target="_blank"
+									class="text-white">Terms of Use</a></li>
+							<li class="border-start px-3"><a href="https://www.cuscadenpeak.com/privacy-policy "
+									target="_blank" class="text-white">Privacy Policy</a></li>
+							<li class="border-start ps-3"><a href="https://www.cuscadenpeak.com/data-protection-policy "
+									target="_blank" class="text-white">PDPA Statement</a></li>
+						</ul>
+					</nav>
+
+				</div>
+
+			</div>
+			<!-- Bottom Area -->
+
+		</div>
+	</footer>
+	<!-- Footer -->
+
+
+	<!-- Cookie Policy -->
+	<div class="cookie-policy cookie-policy-main bg-faded-primary text-primary position-fixed start-0 bottom-0 w-100 py-3 text-center text-md-start z-5">
+	<div class="container">
+	<div class="row align-items-center">
+	<div class="col-md-6">
+	<p class="mb-md-0">This website uses cookies to enhance your browsing experience.</p>
+	</div>
+	<div class="col-md-6 d-flex justify-content-center justify-content-md-end mt-3 mt-md-0">
+	<button type="button" class="btn p-0 text-secondary shadow-none me-4 rounded-5 border-0 cookie-policy__btn cookie-policy__settings">Cookie Settings</button>
+	<button type="button" class="btn btn-primary rounded-5 border-0 cookie-policy__btn cookie-policy__accept">Accept All</button>
+	</div>
+	</div>
+	</div>
+	</div>
+	<!-- Cookie Policy -->
+
+
+	<!-- Cookie Policy Settings -->
+	<div
+		class="cookie-policy cookie-policy-settings shadow bg-white position-fixed start-0 bottom-0 w-100 py-4 text-center text-md-start z-5">
+		<div class="container">
+			<div class="row align-items-end">
+				<div class="col-md-6">
+					<h5 class="text-primary mb-3">Cookie Settings</h5>
+					<p class="mb-md-0 fs-base">Manage your cookie preferences to personalise your browsing experience.
+						Please note that opting out of certain types of cookies may impact the functionality and
+						performance of our website.</p>
+					<ul class="list-unstyled ps-0 mb-0 site-accordion">
+						<li class="py-3 border-bottom site-accordion__item">
+							<div
+								class="d-flex align-items-center justify-content-between cursor-pointer site-accordion__heading">
+								<div class="d-flex align-items-center">
+									<i class="icon-block icon-block--check me-3"></i>
+									<strong class="text-primary">Strictly Necessary Cookies</strong>
+								</div>
+								<span
+									class="icon-block icon-block--chevron-down site-accordion__icon transition"></span>
+							</div>
+							<div class="site-accordion__content fs-base px-4 ms-2 mt-2">
+								<p>These cookies are essential for the operation of our website and cannot be disabled.
+								</p>
+
+								<div class="form-check form-switch d-flex align-items-center">
+									<input disabled class="form-check-input disabled" type="checkbox" id="tempData" checked>
+									<label class="form-check-label mt-1 ms-2" for="tempData">Temp Data: This cookie is essential
+										for storing form data.</label>
+								</div>
+							</div>
+						</li>
+						<li class="py-3 site-accordion__item">
+							<div
+								class="d-flex align-items-center justify-content-between cursor-pointer site-accordion__heading">
+								<div class="d-flex align-items-center">
+									<i class="icon-block icon-block--close me-3"></i>
+									<strong class="text-primary">Various Cookies</strong>
+								</div>
+								<span
+									class="icon-block icon-block--chevron-down site-accordion__icon transition"></span>
+							</div>
+							<div class="site-accordion__content fs-base px-4 ms-2 mt-2">
+								<p>These cookies are essential for the operation of our website and cannot be disabled.
+								</p>
+
+								<div class="form-check form-switch d-flex align-items-center">
+									<input class="form-check-input" type="checkbox" id="analyticsData">
+									<label class="form-check-label mt-1 ms-2" for="analyticsData">Analytics: This cookie collects
+										information about how visitors use our website.</label>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-6 d-flex justify-content-center justify-content-md-end mt-3 mt-md-0 pb-5">
+					<button type="button"
+						class="btn p-0 text-secondary shadow-none me-4 rounded-5 border-0 cookie-policy__btn">Save
+						current settings</button>
+					<button type="button" class="btn btn-primary rounded-5 border-0 cookie-policy__btn">Accept all
+						cookies and close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Cookie Policy Settings -->
+		
+
+	<!-- Scripts -->
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	<script src="scripts/custom.js"></script>
+	<script src="scripts/stores.js"></script>
+
+</body>
+
+</html>

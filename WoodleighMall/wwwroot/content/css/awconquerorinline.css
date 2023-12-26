@@ -1,0 +1,10 @@
+@font-face {
+    font-family: awconquerorinline;
+    src: url('../fonts/AWConquerorInlineRegular.eot');
+    src: url('../fonts/AWConquerorInlineRegular.eot') format('embedded-opentype'),
+         url('../fonts/AWConquerorInlineRegular.woff') format('woff'),
+         url('../fonts/AWConquerorInlineRegular.ttf') format('truetype'),
+         url('../fonts/AWConquerorInlineRegular.svg#awconquerorinline') format('svg');
+	font-weight:400;
+	font-style:normal;
+}

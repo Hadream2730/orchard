@@ -1,0 +1,23 @@
+.btn {
+	@include media-breakpoint-down(sm) {
+		padding-bottom: 0.65rem;
+	}
+}
+
+.btn-gray {
+	background-color: #6E6E6E !important;
+}
+
+.btn-outline-primary {
+	&:hover {
+		background-color: #D7E2C8;
+		color: $primary;
+		border-color: #D7E2C8;
+	}
+}
+
+.store-search-btn {
+	@include media-breakpoint-down(sm) {
+		padding-bottom: 0.5rem;
+	}
+}

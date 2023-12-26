@@ -1,0 +1,12 @@
+﻿@using OrchardCore.Entities
+@using OrchardCore.ContentManagement
+@using OrchardCore.Flows.Models
+@using Newtonsoft.Json.Linq
+@using System.Linq
+
+
+@inject OrchardCore.ContentManagement.Display.IContentItemDisplayManager ContentItemDisplayManager
+@{
+    string body = Model.ContentItem.Content.HTMLBlock.HTML.Html;
+}
+@Html.Raw(body)

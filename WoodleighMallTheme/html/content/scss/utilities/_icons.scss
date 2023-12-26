@@ -1,0 +1,95 @@
+.icon-block {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.icon-block--arrow-left, .icon-block--arrow-right {
+    background-image: url(../images/icons/arrow-left.png);
+    width: 1.625rem;
+    height: 3.25rem; 
+    @include media-breakpoint-down(md) {
+        width: 1rem;
+        height: 1.8rem;
+    }
+}
+
+.icon-block--arrow-right {
+    background-image: url(../images/icons/arrow-right.png);
+}
+
+.icon-block--location {
+    background-image: url(../images/icons/location.svg);
+    min-width: 1.14rem;
+    height: 1.73rem;
+}
+
+.icon-block--phone {
+    background-image: url(../images/icons/phone.svg);
+    min-width: 1.55rem;
+    @include square(1.55rem);
+}
+
+.icon-block--location2, .icon-block--phone2, .icon-block--clock {
+    background-image: url(../images/icons/location2.svg);
+    @include square(2.25rem);
+}
+
+.icon-block--phone2 {
+    background-image: url(../images/icons/phone2.svg);
+}
+
+.icon-block--clock {
+    background-image: url(../images/icons/clock.svg);
+}
+
+.icon-block--share {
+    background-image: url(../images/icons/share.svg);
+    min-width: 1.5rem;
+    height: 1.73rem;
+}
+
+.icon-block--close {
+    background-image: url(../images/icons/close.svg);
+    @include square(1.1rem);
+}
+
+.icon-block--share-alt {
+    background-image: url(../images/icons/share-alt.svg);
+    min-width: 1.2rem;
+    @include square(1.2rem);
+}
+
+.icon-block--facebook, .icon-block--whatsapp {
+    background-image: url(../images/icons/facebook.svg);
+    @include square(2.5rem);
+}
+
+.icon-block--whatsapp {
+    background-image: url(../images/icons/whatsapp.svg);
+}
+
+.icon-block--facebook-primary, .icon-block--whatsapp-primary {
+    background-image: url(../images/icons/facebook-primary.svg);
+    @include square(1.3rem);
+}
+
+.icon-block--whatsapp-primary {
+    background-image: url(../images/icons/whatsapp-primary.svg);
+}
+
+.icon-block--check {
+    background-image: url(../images/icons/check.svg);
+    @include square(1rem);
+}
+
+.icon-block--close {
+    background-image: url(../images/icons/close.svg);
+    @include square(1rem);
+}
+
+.icon-block--chevron-down {
+    background-image: url(../images/icons/chevron-down.svg);
+    width: 1rem;
+    height: 0.8rem;
+}

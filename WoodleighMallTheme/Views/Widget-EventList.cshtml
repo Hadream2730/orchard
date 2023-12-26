@@ -1,0 +1,42 @@
+﻿@{
+    var eventList = await Orchard.QueryListItemsAsync("4wrn0pcpxs7p8y3f4snbykjwne");
+    eventList = eventList.OrderBy(x => x.DisplayText).OrderBy(x => x.Content.Event.StartDate.Value);
+    var count = 0;
+}
+<div id="events" class="events-section py-5">
+    <div class="container my-lg-5">
+        <h3 class="text-secondary font2 text-uppercase mb-0">Events</h3>
+        @if (eventList.Count() > 0)
+        {
+            <!-- Cards -->
+            <div class="row">
+                @foreach (var item in eventList)
+                {
+                    string startDate = string.Empty, endDate = string.Empty;
+                    DateTime? sDate = null, eDate = null;
+                    if (item.ContentItem.Content.Event.StartDate != null)
+                    {
+                        startDate = item.ContentItem.Content.Event.StartDate.Value;
+                        sDate = DateTime.Parse(startDate);
+                    }
+                    if (item.ContentItem.Content.Event.EndDate != null)
+                    {
+                        endDate = item.ContentItem.Content.Event.EndDate.Value;
+                        eDate = DateTime.Parse(endDate);
+                    }
+                    var curDate = System.DateTime.Now;
+                    if (sDate.HasValue && eDate.HasValue && sDate.Value.Date <= curDate.Date && eDate.Value.Date >= curDate.Date)
+                    {
+                        count = count + 1;
+                        @await Orchard.DisplayAsync(item,"InEventList")
+                    }
+                }
+            </div>
+        }
+        @if (count == 0)
+        {
+            <p class="mt-4 fs-4 text-center">Coming Soon...</p>
+        }
+    </div>
+</div>
+<img class="position-absolute events-section__img" src="content/images/site-icon.png" alt="Image">

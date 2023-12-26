@@ -1,0 +1,70 @@
+.main-navigation {
+    @include media-breakpoint-down(xl) {
+        position: fixed;
+        height: 100%;
+        padding-top: 7rem;
+        right: -100%;
+        z-index: 12;
+        font-size: 2rem;
+    }
+}
+
+.main-navigation--active {
+    right: 0;
+}
+
+.nav-menu__item {
+    position: relative;
+
+    a {
+        color: #B5B5B5;
+
+        &:hover {
+            color: $info;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        &:hover {
+            >.nav-menu__dropdown {
+                opacity: 1;
+                visibility: visible;
+                @include transform(rotateX(0deg));
+                @include transition(transform 0.4s ease 0s, opacity 0.1s ease 0s);
+            }
+        }
+    }
+}
+
+.nav-item__item--active a {
+    color: $primary;
+}
+
+
+.nav-menu__dropdown {
+    @include media-breakpoint-up(xl) {
+        -moz-backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        opacity: 0;
+        z-index: 12;
+        top: 4.8rem;
+        min-width: 13rem;
+        list-style: none;
+        @include transform(rotateX(-90deg));
+        @include transform-origin (0 0 0);
+        @include transition(transform 0.7s ease 0s, opacity 0.1s ease 0.3s);
+        @include shadow(0 3px 7px -2px rgba(0, 0, 0, 0.5));
+    }
+
+    @include media-breakpoint-down(xl) {
+        font-size: 80%;
+        padding-left: 7rem;
+    }
+
+}
+
+
+.site-header--sticky .nav-menu__dropdown {
+    top: 3.8rem;
+}

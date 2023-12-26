@@ -1,0 +1,34 @@
+.select2-results, .has-scrollbar {
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.4rem
+}
+
+/* button */
+::-webkit-scrollbar-button {
+    background: #D3D3D3;
+    display: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $primary;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $primary;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #D3D3D3;
+}
+
+/* Corner */
+::-webkit-scrollbar-corner {
+    background: #999;
+}
+
+}
